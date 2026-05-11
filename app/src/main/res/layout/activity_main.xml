@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@drawable/img"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="146dp"
+        android:background="#F2A8A8"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/appIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="App Icon"
+            android:src="@drawable/todolist" />
+
+        <TextView
+            android:id="@+id/greetingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Good Morning, John!"
+            android:textColor="#333333"
+            android:textSize="27dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="TO DO LIST"
+        android:textColor="#999696"
+        android:textFontWeight="1000"
+        android:textSize="25dp"
+        android:textStyle="bold">
+    </TextView>
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#E48080"
+        android:layout_marginBottom="30dp"
+        android:textSize="32sp"
+        android:text="Add Task"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/add"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="29dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </ScrollView>
+
+</RelativeLayout>
